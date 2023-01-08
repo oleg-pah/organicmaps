@@ -1034,6 +1034,12 @@ public class MwmActivity extends BaseMwmFragmentActivity
     {
       UiUtils.show(mPointChooser);
       mMapButtonsViewModel.setButtonsHidden(true);
+      if (mPointChooserMode == PointChooserMode.NONE)
+      {
+        // BUG: https://github.com/organicmaps/organicmaps/issues/3945
+        Logger.e(TAG, "nativeIsInChoosePositionMode is true but mPointChooserMode is NONE");
+        mPointChooserMode = PointChooserMode.EDITOR;
+      }
     }
     if (mOnmapDownloader != null)
       mOnmapDownloader.onResume();
