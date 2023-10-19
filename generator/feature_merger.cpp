@@ -109,14 +109,16 @@ size_t MergedFeatureBuilder::GetKeyPointsCount() const
   return m_roundBounds[0].size() + m_roundBounds[1].size() + 2;
 }
 
-double MergedFeatureBuilder::GetPriority() const
+// Gives merge priority to shorter lines
+// to spread points more evenly between the features and to avoid producing too long lines.
+double MergedFeatureBuilder::GetMergePriority() const
 {
   PointSeq const & poly = GetOuterGeometry();
 
   double pr = 0.0;
   for (size_t i = 1; i < poly.size(); ++i)
     pr += poly[i-1].SquaredLength(poly[i]);
-  return pr;
+  return std::numeric_limits<double>::max() - pr;
 }
 
 
@@ -216,16 +218,17 @@ void FeatureMergeProcessor::DoMerge(FeatureEmitterIFace & emitter)
       MergedFeatureBuilder * pp = 0;
       if (it != m_map.end())
       {
-        // Find best feature to continue.
+        // Find the best (the shortest) connected line feature to continue.
         double bestPr = -1.0;
         for (size_t i = 0; i < it->second.size(); ++i)
         {
           MergedFeatureBuilder * pTest = it->second[i];
           if (pTest->HasType(type))
           {
-            double const pr = pTest->GetPriority();
+            double const pr = pTest->GetMergePriority();
             // It's not necessery assert, because it's possible in source data
-//            ASSERT_GREATER ( pr, 0.0, () );
+            // TODO(pastk) : likely caused by degenerate closed lines.
+            // ASSERT_GREATER(pr, 0.0, ());
             if (pr > bestPr)
             {
               pp = pTest;
@@ -234,7 +237,7 @@ void FeatureMergeProcessor::DoMerge(FeatureEmitterIFace & emitter)
           }
         }
 
-        // Merge current feature with best feature.
+        // Merge the current feature with the best connected feature.
         if (pp)
         {
           bool const toBack = pt.second;

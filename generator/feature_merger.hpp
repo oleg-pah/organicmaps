@@ -51,7 +51,7 @@ public:
   std::pair<m2::PointD, bool> GetKeyPoint(size_t i) const;
   size_t GetKeyPointsCount() const;
 
-  double GetPriority() const;
+  double GetMergePriority() const;
 };
 
 /// Feature merger.
