@@ -62,10 +62,12 @@ class WorldMapGenerator
     /// This function is called after merging linear features.
     void operator()(feature::FeatureBuilder const & fb) override
     {
-      // Do additional check for suitable size of feature, because
-      // same check in NeedPushToWorld() applies to areas only.
-      if (NeedPushToWorld(fb) &&
-          scales::IsGoodForLevel(scales::GetUpperWorldScale(), fb.GetLimitRect()))
+      // Discard too short ferry lines.
+      static const uint32_t ferryType = classif().GetTypeByPath({"route", "ferry"});
+      constexpr int ferryThresholdLevel = scales::GetUpperWorldScale() - 2;
+      // TODO(pastk): there seems to be two area size checks: in NeedPushToWorld() and in PushFeature().
+      if (NeedPushToWorld(fb) && //pastk
+          (!fb.HasType(ferryType) || scales::IsGoodForLevel(ferryThresholdLevel, fb.GetLimitRect())))
         PushSure(fb);
     }
 
