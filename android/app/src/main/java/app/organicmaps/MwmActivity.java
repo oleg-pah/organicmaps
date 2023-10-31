@@ -116,7 +116,10 @@ import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.POST_NOTIFICATIONS;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static app.organicmaps.location.LocationState.FOLLOW;
+import static app.organicmaps.location.LocationState.FOLLOW_AND_ROTATE;
 import static app.organicmaps.location.LocationState.LOCATION_TAG;
+import static app.organicmaps.location.LocationState.PENDING_POSITION;
 
 public class MwmActivity extends BaseMwmFragmentActivity
     implements PlacePageActivationListener,
@@ -1085,8 +1088,6 @@ public class MwmActivity extends BaseMwmFragmentActivity
     LocationHelper.from(this).addListener(this);
     onMyPositionModeChanged(LocationState.nativeGetMode());
     mSearchController.attach(this);
-    if (!Config.isScreenSleepEnabled())
-      Utils.keepScreenOn(true, getWindow());
   }
 
   @Override
@@ -1530,6 +1531,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
     mMapButtonsViewModel.setSearchOption(null);
     mMapButtonsViewModel.setLayoutMode(MapButtonsController.LayoutMode.regular);
     refreshLightStatusBar();
+    Utils.keepScreenOn(Config.isKeepScreenOnEnabled(), getWindow());
   }
 
   @Override
@@ -1549,6 +1551,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
 
     requestPostNotificationsPermission();
     NavigationService.startForegroundService(this);
+    Utils.keepScreenOn(true, getWindow());
   }
 
   @Override
@@ -1700,6 +1703,10 @@ public class MwmActivity extends BaseMwmFragmentActivity
     if (controller.isPlanning())
       showAddStartOrFinishFrame(controller, true);
     LocationHelper.from(this).restartWithNewMode();
+    if (newMode == FOLLOW || newMode == FOLLOW_AND_ROTATE)
+      Utils.keepScreenOn(Config.isKeepScreenOnEnabled() || RoutingController.get().isNavigating(), getWindow());
+    else
+      Utils.keepScreenOn(RoutingController.get().isNavigating(), getWindow());
   }
 
   /**
