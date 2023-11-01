@@ -15,6 +15,7 @@ import androidx.annotation.RequiresPermission;
 import androidx.annotation.UiThread;
 
 import app.organicmaps.Framework;
+import app.organicmaps.Map;
 import app.organicmaps.MwmApplication;
 import app.organicmaps.bookmarks.data.FeatureId;
 import app.organicmaps.bookmarks.data.MapObject;
@@ -68,7 +69,7 @@ public class LocationHelper implements BaseLocationProvider.Listener
   @Nullable
   public MapObject getMyPosition()
   {
-    if (!LocationState.isTurnedOn())
+    if (!isActive())
     {
       mMyPosition = null;
       return null;
@@ -239,7 +240,7 @@ public class LocationHelper implements BaseLocationProvider.Listener
     if (RoutingController.get().isNavigating())
       return INTERVAL_NAVIGATION_MS;
 
-    final int mode = LocationState.nativeGetMode();
+    final int mode = Map.isEngineCreated() ? LocationState.getMode() : LocationState.NOT_FOLLOW_NO_POSITION;
     switch (mode)
     {
       case LocationState.PENDING_POSITION:
@@ -323,7 +324,14 @@ public class LocationHelper implements BaseLocationProvider.Listener
   {
     if (isActive())
       return;
-    else if (LocationState.nativeGetMode() == LocationState.NOT_FOLLOW_NO_POSITION)
+    else if (!Map.isEngineCreated())
+    {
+      // LocationState.nativeGetMode() is initialized only after drape creation.
+      // https://github.com/organicmaps/organicmaps/issues/1128#issuecomment-1784435190
+      Logger.i(TAG, "Engine is not created yet.");
+      return;
+    }
+    else if (LocationState.getMode() == LocationState.NOT_FOLLOW_NO_POSITION)
     {
       Logger.i(TAG, "Location updates are stopped by the user manually.");
       return;

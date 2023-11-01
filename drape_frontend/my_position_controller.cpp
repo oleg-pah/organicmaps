@@ -922,13 +922,13 @@ void MyPositionController::DeactivateRouting()
 
 void MyPositionController::CheckIsWaitingForLocation()
 {
-  if (IsWaitingForLocation() || m_mode == location::NotFollowNoPosition)
+  if (m_listener && IsWaitingForLocation())
   {
     CHECK_ON_TIMEOUT(m_locationWaitingNotifyId, kMaxPendingLocationTimeSec, CheckIsWaitingForLocation);
     if (m_pendingStarted && m_pendingTimer.ElapsedSeconds() >= kMaxPendingLocationTimeSec)
     {
       m_pendingStarted = false;
-      if (m_listener)
+      if (m_listener && IsWaitingForLocation())
         m_listener->PositionPendingTimeout();
     }
   }

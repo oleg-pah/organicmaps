@@ -245,6 +245,9 @@ public class MwmActivity extends BaseMwmFragmentActivity
   public void onRenderingCreated()
   {
     checkMeasurementSystem();
+    // LocationState.nativeGetMode() is initialized only after drape creation.
+    // https://github.com/organicmaps/organicmaps/issues/1128#issuecomment-1784435190
+    autostartLocation();
   }
 
   @Override
@@ -467,8 +470,6 @@ public class MwmActivity extends BaseMwmFragmentActivity
       onNavigationStarted();
     else if (savedInstanceState == null && RoutingController.get().hasSavedRoute())
       addTask(new Factory.RestoreRouteTask());
-
-    autostartLocation();
 
     if (getIntent().getBooleanExtra(EXTRA_UPDATE_THEME, false))
       ThemeSwitcher.INSTANCE.restart(isMapRendererActive());
@@ -1083,7 +1084,6 @@ public class MwmActivity extends BaseMwmFragmentActivity
     IsolinesManager.from(getApplicationContext()).attach(this::onIsolinesStateChanged);
     LocationState.nativeSetListener(this);
     LocationHelper.from(this).addListener(this);
-    onMyPositionModeChanged(LocationState.nativeGetMode());
     mSearchController.attach(this);
     if (!Config.isScreenSleepEnabled())
       Utils.keepScreenOn(true, getWindow());
@@ -1777,6 +1777,8 @@ public class MwmActivity extends BaseMwmFragmentActivity
     if (LocationUtils.checkFineLocationPermission(this))
     {
       Logger.i(LOCATION_TAG, "Permission ACCESS_FINE_LOCATION is granted");
+      if (LocationState.getMode() == LocationState.NOT_FOLLOW_NO_POSITION)
+        LocationState.nativeSwitchToNextMode();
       LocationHelper.from(this).start();
       return;
     }
@@ -1812,7 +1814,7 @@ public class MwmActivity extends BaseMwmFragmentActivity
    */
   private void autostartLocation()
   {
-    if (LocationState.nativeGetMode() == LocationState.NOT_FOLLOW_NO_POSITION)
+    if (LocationState.getMode() == LocationState.NOT_FOLLOW_NO_POSITION)
     {
       Logger.i(LOCATION_TAG, "Location updates are stopped by the user manually.");
       LocationState.nativeOnLocationError(LocationState.ERROR_GPS_OFF);
@@ -1983,6 +1985,12 @@ public class MwmActivity extends BaseMwmFragmentActivity
     if (isDestroyed())
     {
       Logger.w(LOCATION_TAG, "Ignore late callback from core because activity is already destroyed");
+      return;
+    }
+
+    if (LocationState.getMode() == LocationState.NOT_FOLLOW_NO_POSITION)
+    {
+      Logger.d(LOCATION_TAG, "Don't show 'location timeout' error dialog in NOT_FOLLOW_NO_POSITION mode");
       return;
     }
 
