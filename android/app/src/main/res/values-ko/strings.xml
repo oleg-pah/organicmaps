@@ -46,7 +46,8 @@
 	<string name="about_proposition_3">• 빠르고 최소한의 정크가 없습니다</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">애호가와 자원 봉사자가 만든 오픈 소스 응용 프로그램.</string>
-	<string name="connection_settings">연결 설정</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">위치 설정</string>
 	<string name="close">닫기</string>
 	<string name="unsupported_phone">하드웨어 촉진 OpenGL이 요구됩니다. 애석하게도 귀하의 장치는 지원되지 않습니다.</string>
 	<string name="download">다운로드</string>
@@ -505,8 +506,6 @@
 	<string name="editor_share_to_all_dialog_message_1">개인 정보를 입력하지 않았는지 확인하십시오.</string>
 	<string name="editor_share_to_all_dialog_message_2">OpenStreetMap 편집자가 변경 사항을 확인하고 질문이 있는 경우 귀하에게 연락할 것입니다.</string>
 	<string name="navigation_stop_button">중지</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Organic Maps는 무료 오픈 소스 오프라인 지도 애플리케이션입니다. 광고 없음. 추적이 없습니다. 지도에 오류가 표시되면 OpenStreetMap에서 수정하세요. 이 프로젝트는 여가 시간에 열광자들에 의해 만들어지므로 여러분의 피드백과 지원이 필요합니다.</string>
 	<!-- For the first routing -->
 	<string name="accept">동의</string>
 	<!-- For the first routing -->

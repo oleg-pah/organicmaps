@@ -46,7 +46,8 @@
 	<string name="about_proposition_3">•快速，簡約，沒有垃圾</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">由愛好者和志願者創建的開源應用程序。</string>
-	<string name="connection_settings">連線設定</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">位置設定</string>
 	<string name="close">關閉</string>
 	<string name="unsupported_phone">需要 OpenGL 硬體加速功能的支援。但很不幸的，您的裝置並不支援此功能！</string>
 	<string name="download">下載</string>
@@ -523,8 +524,6 @@
 	<string name="editor_share_to_all_dialog_message_1">確保您沒有輸入任何個人資料。</string>
 	<string name="editor_share_to_all_dialog_message_2">OpenStreetMap 編輯人員將檢查更改並在有任何問題時與您聯繫。</string>
 	<string name="navigation_stop_button">停止</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Organic Maps 是一款免費的開源離線地圖 app。沒有廣告，不會追蹤。如果您在地圖上看到錯誤，請在 OpenStreetMap 中修復吧。這個專案由愛好者在我們的空閒時間創建，因此我們需要您的回饋和支援。</string>
 	<!-- For the first routing -->
 	<string name="accept">接受</string>
 	<!-- For the first routing -->

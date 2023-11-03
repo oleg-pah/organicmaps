@@ -14,6 +14,8 @@
 	<string name="about_proposition_3">• Haraka, minimalistic, hakuna taka</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">Maombi ya chanzo-wazi iliyoundwa na wanaovutia na wanaojitolea.</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">Mipangilio ya mahali</string>
 	<!-- Header of settings activity where user defines storage path -->
 	<string name="maps_storage">Hifadhi ramani kwenye</string>
 
@@ -84,8 +86,6 @@
 	<string name="osm_presentation">Takwimu za katuni kutoka kwa OpenStreetMap kama ya %s. Ni kama Wikipedia ambapo unaweza kuongeza au kuhariri maeneo kwa watumiaji wote ulimwenguni.</string>
 	<string name="editor_other_info">Tuma ujumbe kwenye vihariri vya OSM</string>
 	<string name="editor_share_to_all_dialog_message_2">Wahariri wa OpenStreetMap watakagua mabadiliko na kuwasiliana nawe ikiwa wana maswali yoyote.</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Organic Maps ni programu huria na ya chanzo huria ya ramani za nje ya mtandao. Hakuna matangazo. Hakuna ufuatiliaji. Ukiona hitilafu kwenye ramani, tafadhali irekebishe katika OpenStreetMap. Mradi huu umeundwa na wapendaji katika wakati wetu wa bure, kwa hivyo tunahitaji maoni na usaidizi wako.</string>
 	<!-- Settings: "Send general feedback" button -->
 	<string name="feedback_general">Maoni Jumla</string>
 	<string name="prefs_languages_information">Tunatumia maagizo ya sautii ya TTS ya mfumo. Vifaa vingi vya Android vinatumia Google TTS, unaweza kuipakua au kuisasisha kwenye Google Play (https://play.google.com/store/apps/details?id=com.google.android.tts)</string>

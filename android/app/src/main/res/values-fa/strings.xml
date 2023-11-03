@@ -49,7 +49,8 @@
 	<string name="about_proposition_3">• سریع ، مینیمالیستی ، بدون آشغال</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">برنامه منبع باز ایجاد شده توسط علاقه مندان و داوطلبان.</string>
-	<string name="connection_settings">تنظیمات اتصال</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">تنظیمات مکان</string>
 	<string name="close">بستن</string>
 	<string name="unsupported_phone">نیازمند است. متاسفانه دستگاه شما از آن پشتیبانی نمی‌کندOpenGLبرنامه برای اجرا به</string>
 	<string name="download">دانلود</string>
@@ -502,8 +503,6 @@
 	<string name="editor_share_to_all_dialog_message_1">مطمئن شوید که هیچ اطلاعات شخصی وارد نکرده باشد.</string>
 	<string name="editor_share_to_all_dialog_message_2">ویرایشگران OpenStreetMap ﺗﻐﯿﯿﺮﺍﺕ ﺭﺍ ﺑﺮﺭﺳﯽ ﮐﺮﺩﻩ ﻭ ﺩﺭ ﺻﻮﺭﺕ ﺩﺍﺷﺘﻦ ﻫﺮﮔﻮﻧﻪ ﺳﻮﺍﻝ ﺑﺎ ﺷﻤﺎ ﺗﻤﺎﺱ ﺧﻮﺍﻫﻨﺪ ﮔﺮﻓﺖ.</string>
 	<string name="navigation_stop_button">توقف</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Organic Maps یک برنامه نقشه آفلاین رایگان و منبع باز است. بدون تبلیغات بدون ردیابی اگر خطایی روی نقشه مشاهده کردید، لطفاً آن را در OpenStreetMap برطرف کنید. این پروژه توسط علاقه مندان در اوقات فراغت ما ایجاد می شود، بنابراین ما به بازخورد و پشتیبانی شما نیاز داریم.</string>
 	<!-- For the first routing -->
 	<string name="accept">موافقم</string>
 	<!-- For the first routing -->

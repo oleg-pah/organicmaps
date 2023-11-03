@@ -49,7 +49,8 @@
 	<string name="about_proposition_3">• Швидкий, мінімалістичний, без зайвого сміття</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">Програма з відкритим кодом, створена ентузіастами та волонтерами.</string>
-	<string name="connection_settings">Налаштування підключення</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">Налаштування місця розташування</string>
 	<string name="close">Закрити</string>
 	<string name="unsupported_phone">Для роботи програми необхідний апаратно прискорений OpenGL. На жаль, ваш пристрій не підтримується.</string>
 	<string name="download">Завантажити</string>
@@ -533,8 +534,6 @@
 	<string name="editor_share_to_all_dialog_message_1">Переконайтеся, що ви не ввели особисті дані.</string>
 	<string name="editor_share_to_all_dialog_message_2">Редактори OpenStreetMap перевірять зміни та зв’яжуться з вами, якщо у них виникнуть запитання.</string>
 	<string name="navigation_stop_button">стоп</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Organic Maps – це швидкі та безкоштовні карти, які не потребують доступу до Інтернету. Карти засновані на даних проекта OpenStreetMap.org, саме там Ви можете виправити помилки та додати відсутні дані. Реклама та збір особистої інформації відсутні. Organic Maps це проект з відкритим вихідним кодом, створюється ентузіастами у вільний час, тому нам потрібні Ваші відгуки та підтримка!</string>
 	<!-- For the first routing -->
 	<string name="accept">Прийняти</string>
 	<!-- For the first routing -->

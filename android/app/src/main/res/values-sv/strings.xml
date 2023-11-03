@@ -46,7 +46,8 @@
 	<string name="about_proposition_3">• Snabb, minimalistisk, inget skräp</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">Open-källansökan skapad av entusiaster och frivilliga.</string>
-	<string name="connection_settings">Anslutningsinställningar</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">Inställningar för plats</string>
 	<string name="close">Stäng</string>
 	<string name="unsupported_phone">Hårdvaruaccelererad OpenGL krävs. Din enhet stöds tyvärr inte.</string>
 	<string name="download">Ladda ner</string>
@@ -503,8 +504,6 @@
 	<string name="editor_share_to_all_dialog_message_1">Se till att du inte angett någon personinformation</string>
 	<string name="editor_share_to_all_dialog_message_2">OpenStreetMap-redigerare kommer att kontrollera ändringarna och kontakta dig om de har några frågor.</string>
 	<string name="navigation_stop_button">stopp</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Organic Maps är en gratis offlinekartapplikation med öppen källkod. Inga annonser. Ingen spårning. Om du ser ett fel på kartan, åtgärda det i OpenStreetMap. Projektet skapas av entusiaster på vår fritid, så vi behöver din feedback och support.</string>
 	<!-- For the first routing -->
 	<string name="accept">Acceptera</string>
 	<!-- For the first routing -->

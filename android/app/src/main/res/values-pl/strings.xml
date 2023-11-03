@@ -46,7 +46,8 @@
 	<string name="about_proposition_3">• Szybka, minimalistyczna, bez śmieci</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">Aplikacja typu open source stworzona przez entuzjastów i wolontariuszy.</string>
-	<string name="connection_settings">Ustawienia połączenia</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">Ustawienia lokalizacji</string>
 	<string name="close">Zamknij</string>
 	<string name="unsupported_phone">Wymagana jest sprzętowa akceleracja OpenGL. Aktualne urządzenie nie jest obsługiwane.</string>
 	<string name="download">Pobierz</string>
@@ -538,8 +539,6 @@
 	<string name="editor_share_to_all_dialog_message_1">Upewnij się, że nie podałeś osobistych danych.</string>
 	<string name="editor_share_to_all_dialog_message_2">Redaktorzy OpenStreetMap sprawdzą zmiany i skontaktują się z Tobą, jeśli będą mieli jakiekolwiek pytania.</string>
 	<string name="navigation_stop_button">stop</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Organic Maps to bezpłatna aplikacja do map offline typu open source. Bez reklam. Bez śledzenia. Jeśli zobaczysz błąd na mapie, popraw go w OpenStreetMap. Projekt jest tworzony przez entuzjastów w czasie wolnym, dlatego potrzebujemy Twojej opinii i wsparcia.</string>
 	<!-- For the first routing -->
 	<string name="accept">Zaakceptuj</string>
 	<!-- For the first routing -->

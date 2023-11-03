@@ -46,7 +46,8 @@
 	<string name="about_proposition_3">• Gyors, minimalista, nincs szemét</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">A rajongók és az önkéntesek által létrehozott nyílt forráskódú alkalmazás.</string>
-	<string name="connection_settings">Helymeghatározási beállítások</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">Helyszínbeállítások</string>
 	<string name="close">Bezár</string>
 	<string name="unsupported_phone">Hardware-s gyorsítású OpenGL szükséges. Sajnos az Ön eszköze nem támogatott.</string>
 	<string name="download">Letöltés</string>
@@ -519,8 +520,6 @@
 	<string name="editor_share_to_all_dialog_message_1">Győződj meg arról, hogy nem adsz meg semmilyen személyes információt.</string>
 	<string name="editor_share_to_all_dialog_message_2">Az OpenStreetMap szerkesztői ellenőrzik a változásokat, és felveszik Önnel a kapcsolatot, ha kérdéseik vannak.</string>
 	<string name="navigation_stop_button">megállítás</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Az Organic Maps egy gyors és ingyenes offline térképalkalmazás hirdetések és nyomkövetés nélkül. A térképek az OpenStreetMap.org közösség által fenntartott adatain alapulnak, így a térképen megtalálható hibákat te is javíthatod, és adhatsz hozzá új helyeket. Az Organic Maps egy nyílt forráskódú projekt, amelyet lelkes fejlesztők hoztak létre szabadidejükben. Visszajelzéseidet és támogatásodat nagyra értékeljük!</string>
 	<!-- For the first routing -->
 	<string name="accept">Elfogad</string>
 	<!-- For the first routing -->

@@ -46,7 +46,8 @@
 	<string name="about_proposition_3">•速く、ミニマルな、ジャンクなし</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">愛好家とボランティアによって作成されたオープンソースアプリケーション。</string>
-	<string name="connection_settings">接続設定</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">ロケーション設定</string>
 	<string name="close">閉じる</string>
 	<string name="unsupported_phone">ハードウェアアクセラレーションされたOpenGLが必要です。残念ながらご利用中のデバイスではサポートされていません。</string>
 	<string name="download">ダウンロード</string>
@@ -503,8 +504,6 @@
 	<string name="editor_share_to_all_dialog_message_1">個人情報を入力していないことを確認してください。</string>
 	<string name="editor_share_to_all_dialog_message_2">OpenStreetMap の編集者が変更を確認し、質問があれば連絡します。</string>
 	<string name="navigation_stop_button">停止</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Organic Mapsは、無料のオープンソースのオフラインマップアプリケーションです。広告なし。全く追跡しません。地図上にエラーが表示された場合は、OpenStreetMapで修正してください。プロジェクトは私たちの自由な時間に愛好家によって作成されているため、フィードバックとサポートが必要です。</string>
 	<!-- For the first routing -->
 	<string name="accept">了解</string>
 	<!-- For the first routing -->

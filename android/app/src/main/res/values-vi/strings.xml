@@ -46,7 +46,8 @@
 	<string name="about_proposition_3">• Nhanh chóng, tối giản, không có rác</string>
 	<!-- Text in About screen -->
 	<string name="about_developed_by_enthusiasts">Ứng dụng nguồn mở được tạo bởi những người đam mê và tình nguyện viên.</string>
-	<string name="connection_settings">Thiết lập Kết nối</string>
+	<!-- The button that opens system location settings -->
+	<string name="location_settings">Cài đặt vị trí</string>
 	<string name="close">Đóng</string>
 	<string name="unsupported_phone">Cần có OpenGL được tăng tốc phần cứng. Thật không may, thiết bị của bạn không được hỗ trợ.</string>
 	<string name="download">Tải xuống</string>
@@ -505,8 +506,6 @@
 	<string name="editor_share_to_all_dialog_message_1">Chắc chắn rằng bạn không nhập bất kỳ thông tin cá nhân nào.</string>
 	<string name="editor_share_to_all_dialog_message_2">Các biên tập viên của OpenStreetMap sẽ kiểm tra các thay đổi và liên hệ với bạn nếu họ có bất kỳ câu hỏi nào.</string>
 	<string name="navigation_stop_button">dừng</string>
-	<!-- Text under the version number in the Help dialog. TODO: Synchronize other translations with English. -->
-	<string name="about_description">Organic Maps là một ứng dụng bản đồ ngoại tuyến mã nguồn mở và miễn phí. Không quảng cáo. Không theo dõi. Nếu bạn thấy lỗi trên bản đồ, hãy sửa lỗi đó trong OpenStreetMap. Dự án được tạo ra bởi những người đam mê trong thời gian rảnh của chúng tôi, vì vậy chúng tôi cần phản hồi và hỗ trợ của bạn.</string>
 	<!-- For the first routing -->
 	<string name="accept">Chấp nhận</string>
 	<!-- For the first routing -->
