@@ -9181,7 +9181,7 @@
 
   [dialog_routing_start_not_determined]
     tags = android,ios
-    en = Route was not created. Unable to locate starting point.
+    en = No road exists at that starting point.  Route was not created.
     af = Roete is nie bereken nie. Kan nie beginpunt opspoor nie.
     ar = لم يتم إنشاء المسار. تعذر تحديد موقع نقطة البدء.
     be = Маршрут не пракладзены. Не знойдзены пункт адпраўлення.
