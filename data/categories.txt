@@ -5892,6 +5892,9 @@ sk:3poštový úrad
 fa:اداره پست
 mr:टपालघर|पोस्ट ऑफिस
 
+amenity-Shipping_Service|@category_post
+en:Shipping Service|U+2709|U+1F3E3|U+1F4E8|U+1F4E9|U+1F3E4|U+1F4EF
+
 amenity-vehicle_inspection
 en:Vehicle Inspection
 ar:فحص المركبة
